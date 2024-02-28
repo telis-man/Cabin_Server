@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "7a8645f2-f24f-4e38-b0ff-41fe4deb838d",
+		"name": "testCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27452351"
+	},
+	"item": [
+		{
+			"name": "randomFact",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "randomFactReceivedExample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/fact/?max_length=20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fact",
+								""
+							],
+							"query": [
+								{
+									"key": "max_length",
+									"value": "20",
+									"description": "max length for the fact"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 May 2023 17:59:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6ImlkZWovdmsxNFpGVUN3TzVKd2NQMnc9PSIsInZhbHVlIjoiTHl3QU9ub1VwZ3Rxd3JDWEh3L3c2VjZhbG1sb1d0bTRCcG1hanhCeE5DWnVQZ003cEEzS2tWR3ZhckdNandhNFQva291THdETEVDb05BcFdyWmdvOWk1dS9VNGVmUlFnRHVLV0lFbWNtV1lOT0JlUnVYTTROczJ3Sm9KamNmTEoiLCJtYWMiOiJlZDUyMzIzMTRjNDg5MzdkMzQxYzJkMDM4OTM1NTIxMDk0ZTY5MTJmYzAyZDczYzZkYjZiMmUyYzM1NDQ1NWYxIiwidGFnIjoiIn0%3D; expires=Tue, 16-May-2023 19:59:16 GMT; path=/; samesite=lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "catfacts_session=eyJpdiI6IkVqbC9mYkl5L1o5VG9VbWFDbFcwOEE9PSIsInZhbHVlIjoiYzNVaG9IZzQ3aUlaWkVNUDVoS0dFcWpLcG5OaURHb3YwcnpuWUprU1FtQThJSzhWTVdhK09pSlhwemFHbnV6U2NsYlEySG9OWWNCMEVFZ1ZrdmhZZnAraFordkhrTmZWaEZRNDlxMXBxSlhueDAreVFEZVNuVE4yYXFDcGFISFkiLCJtYWMiOiJjNzRiNTViNzllZjU0MDNmZTVlMTE3NzJlOWVkOTNmZWI0OGEyYTlkNTIxNjVlMWRkMGEyN2FiZDgwZmRmZGQyIiwidGFnIjoiIn0%3D; expires=Tue, 16-May-2023 19:59:16 GMT; path=/; httponly; samesite=lax"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fact\": \"According to Hebrew legend, Noah prayed to God for help protecting all the food he stored on the ark from being eaten by rats. In reply, God made the lion sneeze, and out popped a cat.\",\n    \"length\": 184\n}"
+				},
+				{
+					"name": "randomFactWithMaxLengthReceived",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/fact/?max_length=20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"fact",
+								""
+							],
+							"query": [
+								{
+									"key": "max_length",
+									"value": "20",
+									"description": "max length for the fact"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 16 May 2023 18:16:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "XSRF-TOKEN=eyJpdiI6Imd4ZnNwZTNDS0hEQ0lLQXlQMEE3YUE9PSIsInZhbHVlIjoiSnV6SFdEdDNmY0xqUXVMSm45RmxKMDNUQnljbWJRNC85RnArQU1JZHpIK2F5ZW9wdXY1V2wxaVh2UnJ0SUpwSzdRUDR1YkFadHhhL0hreXQxazBZU01LYS9pZEdjL1Fud0VzS1N4dk5uVlVRYWg5Y2ZGeDU4Z1k0cHg1MnJjZGMiLCJtYWMiOiIwY2MxZjIzODFkMTg5OTYyZGZmZTUwMzg4MDdiZWRiNGU0YTY2NjIzMmI1YWU2OTAwZTAwNjczNTIxYTU0NDBhIiwidGFnIjoiIn0%3D; expires=Tue, 16-May-2023 20:16:59 GMT; path=/; samesite=lax"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "catfacts_session=eyJpdiI6Imw4cGNoY3ZwYnVYbC9JUUhaTko1MVE9PSIsInZhbHVlIjoidGF5SlJFL0ducGhFYnNUaGtxTm8rSm9TeXdaWVNjdVdWNWMwTjZZbUhsaW93cmVQdGR2eS9UMTFvcGhRdTRrQ0hVcXVHcnNqeVA4Mk9JM2s3bUlsb29DWlVGSkZPQjQ4bXkwdTB5Tng4T1F3a3RKWlhYcCt5MVpPaXp1cFd6dVUiLCJtYWMiOiI1M2ZiMDM3ZGVmYzMxNDYxMzI2ZTc4ZDkxNmQ1YWZjOTI0ZDBkODg4ZTFmODg0MzQ1MzYwZGUwNDRkOGY3NDJiIiwidGFnIjoiIn0%3D; expires=Tue, 16-May-2023 20:16:59 GMT; path=/; httponly; samesite=lax"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"fact\": \"Cats have 3 eyelids.\",\n    \"length\": 20\n}"
+				}
+			]
+		}
+	]
+}
