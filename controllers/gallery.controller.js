@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const path = require("path");
+const sizeOf = require("image-size");
 
 router.get("/", (req, res) => {
   try {
@@ -23,6 +24,17 @@ router.get("/", (req, res) => {
 
       // Create an array of complete image URLs
       const imageUrls = imageFiles.map((file) => {
+        // const sizeOf = require('image-size');
+
+        // // Path to your image file
+        // const imagePath = 'path/to/your/image.jpg';+++++++++
+
+        // // Get the dimensions of the image
+        // const dimensions = sizeOf(imagePath);
+
+        // console.log('Width:', dimensions.width);
+        // console.log('Height:', dimensions.height);
+
         return `${req.protocol}://${req.get("host")}/images/${file}`;
       });
 
