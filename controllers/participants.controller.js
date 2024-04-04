@@ -3,33 +3,33 @@ const router = express.Router();
 const { ObjectId } = require("mongodb");
 const { MongoClient } = require("mongodb");
 
-router.get("/", async (req, res) => {
-  try {
-    const client = await new MongoClient("mongodb://127.0.0.1:27017").connect();
-    const participantsArray = await client
-      .db("appDB")
-      .collection("participants")
-      .find({})
-      .toArray();
-    await client.close();
+// router.get("/", async (req, res) => {
+//   try {
+//     const client = await new MongoClient("mongodb://127.0.0.1:27017").connect();
+//     const participantsArray = await client
+//       .db("appDB")
+//       .collection("participants")
+//       .find({})
+//       .toArray();
+//     await client.close();
 
-    if (participantsArray.length === 0) {
-      res.status(404).json({ error: "No participants found." });
-      return;
-    }
+//     if (participantsArray.length === 0) {
+//       res.status(404).json({ error: "No participants found." });
+//       return;
+//     }
 
-    res.send(participantsArray);
-  } catch (error) {
-    console.log("Error getting participants:", error);
+//     res.send(participantsArray);
+//   } catch (error) {
+//     console.log("Error getting participants:", error);
 
-    if (error.name === "MongoNetworkError") {
-      res.status(400).json({ error: "Failed to connect to the database." });
-      return;
-    }
+//     if (error.name === "MongoNetworkError") {
+//       res.status(400).json({ error: "Failed to connect to the database." });
+//       return;
+//     }
 
-    res.status(500).send("Internal server error.");
-  }
-});
+//     res.status(500).send("Internal server error.");
+//   }
+// });
 
 router.post("/", async (req, res) => {
   const participant = req.body;
