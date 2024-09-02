@@ -6,10 +6,8 @@ const sizeOf = require("image-size");
 
 router.get("/", (req, res) => {
   try {
-    // Assuming your gallery pictures are stored in a directory named "gallery"
     const galleryDir = path.join(__dirname, "../public/images");
 
-    // Read the contents of the gallery directory
     fs.readdir(galleryDir, (err, files) => {
       if (err) {
         console.error("Error reading gallery directory:", err);
@@ -17,25 +15,28 @@ router.get("/", (req, res) => {
         return;
       }
 
-      // Filter out any non-image files
       const imageFiles = files.filter((file) =>
         /\.(jpg|jpeg|png|gif)$/i.test(file)
       );
 
-      // Create an array of complete image URLs
+      const baseDir = path.join(__dirname, "..", "public", "images");
+      let imgSizes = {};
+
       const imageUrls = imageFiles.map((file) => {
-        // const sizeOf = require('image-size');
+        const sizeOf = require("image-size");
 
-        // // Path to your image file
-        // const imagePath = 'path/to/your/image.jpg';+++++++++
+        const imagePath = path.join(baseDir, file);
+        const dimensions = sizeOf(imagePath);
 
-        // // Get the dimensions of the image
-        // const dimensions = sizeOf(imagePath);
+        console.log("Width:", dimensions.width);
+        console.log("Height:", dimensions.height);
 
-        // console.log('Width:', dimensions.width);
-        // console.log('Height:', dimensions.height);
-
-        return `${req.protocol}://${req.get("host")}/images/${file}`;
+        // return `${req.protocol}://${req.get("host")}/images/${file}`;
+        return {
+          path: `${req.protocol}://${req.get("host")}/images/${file}`,
+          width: dimensions.width,
+          height: dimensions.height,
+        };
       });
 
       res.json({ images: imageUrls });
