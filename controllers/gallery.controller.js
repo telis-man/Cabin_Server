@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const path = require("path");
-const sizeOf = require("image-size");
+// const sizeOf = require("image-size");
 
 router.get("/", (req, res) => {
   try {
