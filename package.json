@@ -9,13 +9,16 @@
   "author": "Mantas Nacevicius",
   "license": "ISC",
   "dependencies": {
+    "blurhash": "^2.0.5",
     "console-table-printer": "^2.11.1",
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
     "express": "^4.18.2",
+    "image-size": "^2.0.2",
     "moment": "^2.29.4",
     "mongodb": "^5.5.0",
     "mongoose": "^7.4.1",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "sharp": "^0.34.3"
   }
 }
